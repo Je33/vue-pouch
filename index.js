@@ -145,6 +145,9 @@
                 get: function(db, object, options) {
                     return databases[db].get(object, options || {});
                 },
+                find: function(db, options) {
+                    return databases[db].liveFind(options);
+                },
                 session: {},
                 errors: {},
                 loading: {},
